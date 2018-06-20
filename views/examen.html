@@ -14,22 +14,23 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/crearPregunta">Añadir pregunta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/listado">Ver Preguntas y respuestas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/examen">Examen</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/crearPregunta">Añadir pregunta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/listado">Ver Preguntas y respuestas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/examen">Examen</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <table class="table">
             <thead>
                 <tr>
@@ -41,7 +42,7 @@
                 {% for x in list %}
                 <tr>
                     <td>{{x.pregunta}}</td>
-                    <td id = "{{x._id.toString()}}" >{{x.respuesta}}</td>
+                    <td id="{{x._id.toString()}}">{{x.respuesta}}</td>
                     <td>
                         <button onclick="mostrarSolucion('{{x._id.toString()}}')">Solucionar</button>
                     </td>
@@ -53,12 +54,12 @@
 
 </body>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $("td:nth-of-type(2)").hide();
     });
 
-    function mostrarSolucion(id){
-        $("#"+id).show();
+    function mostrarSolucion(id) {
+        $("#" + id).show();
     }
 </script>
 
