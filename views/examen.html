@@ -44,7 +44,7 @@
                     <td>{{x.pregunta}}</td>
                     <td id="{{x._id.toString()}}">{{x.respuesta}}</td>
                     <td>
-                        <button onclick="mostrarSolucion('{{x._id.toString()}}')">Solucionar</button>
+                        <button class="btn btn-primary" onclick="mostrarSolucion('{{x._id.toString()}}')">Solucionar</button>
                     </td>
                 </tr>
                 {% endfor %}
